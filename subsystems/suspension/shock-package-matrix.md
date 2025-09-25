@@ -1,5 +1,28 @@
 # Shock Package Comparison Matrix
 
+## Project Summary
+
+**Objective**: Upgrade F-250 Tremor suspension for improved washboard compliance, towing stability, and loaded performance while maintaining daily usability.
+
+**Decision**: **Carli Backcountry 2.0** system selected for Phase 2 implementation.
+
+**Key Requirements**: 
+- Superior washboard control for PNW sustained corrugations
+- Improved towing stability with camper + gear loads (600-800 lb)  
+- Maintain ≤2" lift for garage clearance and driveline angles
+- Balance performance gains against cost and maintenance complexity
+
+**Selected Solution**: 
+- Front: 2.0" Remote Reservoir shocks (heat management + chatter control)
+- Rear: 2.0" IFP shocks (cost balance)
+- ~2" front lift / 0-0.5" rear lift
+- $3,200 installed cost, +6 lbs total weight
+- 25-35k mile service interval
+
+**Implementation Timeline**: Phase 2 (post Phase 1 recovery + air systems)
+
+---
+
 Objective: Compare candidate shock systems for the F-250 Tremor (stock leafs initially) to improve towing ride quality, washboard control, and future readiness for moderate added constant rear load (camper + gear est 600–800 lb). Keep lift ≤2" to avoid driveline complexity and maintain garage/ferry flexibility.
 
 ## Candidate Packages
@@ -46,10 +69,11 @@ Objective: Compare candidate shock systems for the F-250 Tremor (stock leafs ini
 - Limitation: Heat capacity limited in sustained corrugations vs remote res.
 - Fit With Goals: Good first upgrade if sag data shows stock leafs acceptable.
 
-### S3 Carli Backcountry 2.0
+### S3 Carli Backcountry 2.0 ⭐ **SELECTED**
 
-- Strength: Remote front improves high-speed chatter & heat; retains moderate cost.
-- Limitation: Rear still IFP; towing porpoise improvement moderate.
+- **Strength**: Remote front improves high-speed chatter & heat; retains moderate cost; excellent PNW washboard performance
+- **Limitation**: Rear still IFP; towing porpoise improvement moderate; 20-30k service interval vs stock
+- **Decision Rationale**: Provides significant washboard compliance improvement without jumping to 2.5" weight/cost. Remote reservoirs essential for sustained corrugations in PNW conditions
 
 ### S4 Carli Pintop 2.5
 
@@ -100,5 +124,30 @@ Objective: Compare candidate shock systems for the F-250 Tremor (stock leafs ini
 2. Record towing oscillation metric on next trailer run.
 3. Enter rear sag under load into `sag-rake-log.md`.
 
+## **DECISION LOCKED: Carli Backcountry 2.0**
+
+### Phase 2 Implementation Plan
+
+**Components:**
+- Carli Backcountry 2.0 Kit (F-250 specific)
+- Front: 2.0" Remote Reservoir Shocks
+- Rear: 2.0" IFP Shocks  
+- Target: ~2" front lift / 0-0.5" rear
+- **Estimated Cost**: $3,200 installed
+- **Added Weight**: ~6 lbs total (+3 lb per front corner)
+
+**Installation Timing:**
+- **Prerequisite**: Complete Phase 1 recovery + air systems
+- **Optimal Window**: Post-camper install to validate final loaded performance
+- **Service Planning**: Schedule first inspection at 25k mi / 2 years
+
+**Performance Expectations:**
+- Major washboard compliance improvement vs stock
+- Better heat management on sustained corrugations  
+- Moderate towing stability improvement (rear IFP limitation)
+- Maintained daily ride quality unladen
+
 ---
-Assumptions: Future constant load 600–800 lb; confirm after camper + drawer decisions. Adjust scoring if load deviates >15%.
+**Status**: Decision final, ready for Phase 2 procurement. No further data collection required.
+
+**Assumptions**: Future constant load 600–800 lb; monitor if drawer system significantly changes rear weight distribution.

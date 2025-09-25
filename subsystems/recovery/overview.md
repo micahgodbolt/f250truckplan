@@ -12,13 +12,13 @@ Objective: Establish a lightweight, modular recovery capability that scales from
 | Ground Anchor       | Deferred                   | Only if routine solo off-tree recoveries |
 
 ## Option Set (Phase 1 Core)
-| Component          | Option A (Chosen)  | Option B           | Pros (Chosen)                    | Trade-offs                    |
-|--------------------|--------------------|--------------------|----------------------------------|-------------------------------|
-| Rear Point         | 2.5" shackle block | 2" block + reducer | Eliminates slop, higher rating   | +~3 lb weight                 |
-| Primary Extraction | 7/8" kinetic rope  | 3/4" rope          | Higher energy, margin            | Slightly heavier, higher cost |
-| Shackle Type       | Soft shackles      | Steel bow shackles | Safer failure, lighter           | Inspect abrasion more often   |
-| Boards             | Mid-length premium | Budget generic     | Strength, cold impact resilience | Higher cost                   |
-| Shovel             | Folding steel      | Full-length        | Compact storage                  | Less leverage                 |
+| Component          | Option A (Chosen)   | Option B           | Pros (Chosen)                    | Trade-offs                    |
+|--------------------|---------------------|--------------------|----------------------------------|-------------------------------|
+| Rear Point         | 2.5" shackle block  | 2" block + reducer | Eliminates slop, higher rating   | +~3 lb weight                 |
+| Primary Extraction | Yankum 7/8" kinetic | 3/4" rope          | Higher energy, margin, regional  | Slightly heavier, higher cost |
+| Shackle Type       | Soft shackles       | Steel bow shackles | Safer failure, lighter           | Inspect abrasion more often   |
+| Boards             | ARB TRED Pro        | Budget generic     | Strength, cold impact resilience | Higher cost                   |
+| Shovel             | Folding steel       | Full-length        | Compact storage                  | Less leverage                 |
 
 ## Phase Roadmap
 | Phase       | Capability Added                             | Gate to Advance                               |
@@ -43,8 +43,9 @@ Objective: Establish a lightweight, modular recovery capability that scales from
 ## Open Questions
 | Question                | Block Type | Next Action                           |
 |-------------------------|------------|---------------------------------------|
-| Board brand selection   | Minor      | Create cold impact comparison table   |
 | Ground anchor necessity | Deferred   | Log recoveries lacking natural anchor |
+
+**Core decisions complete** ✅ - Ready for Phase 1 procurement!
 
 ## Upcoming Files
 | File                     | Purpose                              | Trigger to Create                |

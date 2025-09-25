@@ -2,7 +2,16 @@
 
 > Action-focused plan. Background rationale moved to `docs/overland-context.md`.
 
-## 1. Overview & References
+## 1. Over## 11. Open Questions / Parking Lot
+
+- Scale-confirm camper axle impact & final mounting hardware mass (Pending scale data).
+- Keurig exact wattage (assumed 1500W) – verify for surge margin logging.
+- **Storage decision**: DECKED D4 + Super Pacific integration vs custom half-width fabrication.
+- Winch line speed vs weight preference (shortlist once bumper ordered).
+- Air system mount location (engine bay vs frame rail vs under-bed).
+- Corrosion mitigation schedule (decide annual vs semi-annual after first winter exposure).
+
+## 12. Phase 0 & Phase 1 Detailferences
 
 This file now stays lean: focuses on upgrade decisions, phase sequencing, costs, and active gates. All supporting context & raw data moved to modular docs.
 
@@ -35,20 +44,20 @@ Baseline vehicle, use profile, constraints, and full subsystem rationales were r
 
 ## 6. Subsystem Status Snapshot
 
-| Subsystem       | Current Decision                        | Next Gate / Data Needed              | Notes                                                             |
-|-----------------|-----------------------------------------|--------------------------------------|-------------------------------------------------------------------|
-| Tires           | Retain 35" Year 1                       | Towing trans temps; payload buffer   | 37" deferred until data margin proven                             |
-| Suspension      | Stock Tremor; monitor sag               | Rear sag & ride logs                 | Carli & airbags both deferred; progressive leaf only if >1.5" sag |
-| Towing / WDH    | ReCurve R3 planned                      | Three-pass scale; front axle restore | Tune bar tension before considering bags                          |
-| Armor           | Selective (trans + transfer + steering) | Underbody photo survey               | Add plates only on evidence                                       |
-| Recovery        | Core soft gear first                    | None (procurement)                   | Winch after bumper selection (Phase 2)                            |
-| Electrical      | 12V 2.2–3.0 kW inverter-charger + 150Ah | Cable run length; appliance wattage  | Second battery only if DoD >30% sustained                         |
-| Air System      | Dual compressor, no tank                | Mount measurements                   | Tank only if air tools/beads frequent                             |
-| Storage         | Modular bins + L-track                  | Post-shakedown organization review   | Drawer system gated                                               |
-| Living Systems  | 50L fridge + modular water              | 48h Ah consumption log               | Water plumbing deferred                                           |
-| Lighting        | Stage: reverse/work → scene → ditch     | Night use gap log                    | No roof bar unless mission shifts                                 |
-| Weight Mgmt     | Maintain ≥150 lb buffer                 | Scale tickets; ledger updates        | See weight-scenarios.md                                           |
-| Future Trim Aid | Rear air bags deferred                  | Rake & towing sag data               | Trim aid only; not spring substitute                              |
+| Subsystem       | Current Decision                          | Next Gate / Data Needed              | Notes                                                        |
+|-----------------|-------------------------------------------|--------------------------------------|--------------------------------------------------------------|
+| Tires           | Retain 35" Year 1                         | Towing trans temps; payload buffer   | 37" deferred until data margin proven                        |
+| Suspension      | **SELECTED: Carli Backcountry 2.0**       | Phase 2 implementation timing        | Decision final; $3,200 system ready for Phase 2 procurement  |
+| Towing / WDH    | ReCurve R3 planned                        | Three-pass scale; front axle restore | Tune bar tension before considering bags                     |
+| Armor           | Selective (trans + transfer + steering)   | Underbody photo survey               | Add plates only on evidence                                  |
+| Recovery        | **SELECTED: ARB TRED Pro + Yankum rope**  | Ready for Phase 1 procurement        | $615 Phase 1 cost; winch deferred to Phase 2                 |
+| Electrical      | 12V 2.2–3.0 kW inverter-charger + 150Ah   | Cable run length; appliance wattage  | Second battery only if DoD >30% sustained                    |
+| Air System      | **SELECTED: ARB Twin CKMTA12**            | Ready for Phase 1 implementation     | $1,135-1,355 system; mount location TBD                      |
+| Storage         | **Research: DECKED vs half-width custom** | Super Pacific integration testing    | DECKED D4 pragmatic choice vs custom fabrication             |
+| Living Systems  | 50L fridge + modular water                | 48h Ah consumption log               | Water plumbing deferred                                      |
+| Lighting        | **SELECTED: F150LEDs Paladin Phase 1**    | Bumper mount + upfitter switches     | $200 Phase 1; SP integration Phase 2                         |
+| Weight Mgmt     | Track cumulative; validate as we go       | Scale tickets; ledger updates        | Progressive validation approach - optimize if buffer <200 lb |
+| Future Trim Aid | Rear air bags deferred                    | Rake & towing sag data               | Trim aid only; not spring substitute                         |
 
 ## 7. Immediate Action Items
 
@@ -77,36 +86,52 @@ Immediate (Pre-Phase 1):
 
 ## 9. Budget Tracking (To Populate)
 
-| Phase | Item                                  | Option (Chosen)           | Est Cost (USD) |  Weight (lbs) | Priority | Selected? |
-|-------|---------------------------------------|---------------------------|---------------:|--------------:|----------|-----------|
-| 0     | Scale tickets (multiple passes)       | Local CAT scales          |             40 |             0 | A        | Pending   |
-| 0     | Tire tools (gauge, chalk, IR)         | Mid                       |             85 |             3 | A        | Pending   |
-| 1     | Recovery core kit                     | Quality mid               |            650 |            75 | A        | Pending   |
-| 1     | Onboard air (dual compressor)         | Mid (no tank)             |            650 |            28 | B        | Pending   |
-| 1     | L-track & anchors                     | Aluminum track + fittings |            250 |            15 | A        | Pending   |
-| 1     | Fridge 50L + wiring (temp)            | Efficient mid             |            900 |            60 | A        | Pending   |
-| 2     | Front bumper (aluminum hybrid)        | Mid                       |          1,400 |           110 | A        | Planned   |
-| 2     | Winch 12k synthetic                   | Mid (waterproof)          |          1,000 |            75 | A        | Planned   |
-| 2     | Skid package (selective)              | Mid                       |            800 |            90 | B        | Planned   |
-| 2     | Steering brace / components           | Mid                       |            300 |             5 | B        | Planned   |
-| 3     | 150Ah LiFePO4 battery                 | Quality mid               |            900 |            42 | A        | Planned   |
-| 3     | 60A DC-DC charger + cabling           | Mid                       |            500 |            10 | A        | Planned   |
-| 3     | 2.5–3.0 kW inverter-charger           | Mid                       |          1,600 |            50 | A        | Planned   |
-| 3     | 4/0 cabling + lugs + fuse (Class-T)   | Quality copper            |            450 |            12 | A        | Planned   |
-| 3     | Monitoring (shunt + display)          | Mid                       |            200 |             1 | A        | Planned   |
-| 3     | Portable solar 200W                   | Folding panel             |            350 |            18 | B        | Deferred  |
-| 4     | Modular storage bins / dividers       | Mixed                     |            200 |            25 | A        | Pending   |
-| 5     | Water containers (2x5–7 gal)          | Mid                       |            120 |        83–116 | A        | Pending   |
-| 5     | Shade awning (lightweight)            | Light mid                 |            600 |            25 | B        | Deferred  |
-| 6     | Winch accessories (line dampers, etc) | Mid                       |            250 |            10 | B        | Deferred  |
-| 6     | Comms (GMRS mobile + antenna)         | Mid                       |            350 |             5 | A        | Planned   |
-| 6     | Satellite messenger                   | Existing? (assume buy)    |            400 |           0.5 | A        | Pending   |
-| 7     | Weight optimization swaps (est)       | TBD                       |            500 | -30 (savings) | B        | Future    |
-| ALL   | Corrosion protection materials        | Fluid film / brushes      |            120 |             3 | A        | Pending   |
+| Phase | Item                                  | Option (Chosen)           | Est Cost (USD) |  Weight (lbs) | Priority | Selected?    |
+|-------|---------------------------------------|---------------------------|---------------:|--------------:|----------|--------------|
+| 0     | Scale tickets (multiple passes)       | Local CAT scales          |             40 |             0 | A        | Pending      |
+| 0     | Tire tools (gauge, chalk, IR)         | Mid                       |             85 |             3 | A        | Pending      |
+| 1     | Recovery core kit                     | **ARB TRED Pro + Yankum** |            615 |            75 | A        | **SELECTED** |
+| 1     | Onboard air (dual compressor)         | **ARB Twin CKMTA12**      |          1,245 |            28 | B        | **SELECTED** |
+| 1     | L-track & anchors                     | Aluminum track + fittings |            250 |            15 | A        | Pending      |
+| 1     | Fridge 50L + wiring (temp)            | Efficient mid             |            900 |            60 | A        | Pending      |
+| 2     | Suspension upgrade                    | **Carli Backcountry 2.0** |          3,200 |             6 | A        | **SELECTED** |
+| 2     | Front bumper (aluminum hybrid)        | Mid                       |          1,400 |           110 | A        | Planned      |
+| 2     | Winch 12k synthetic                   | Mid (waterproof)          |          1,000 |            75 | A        | Planned      |
+| 2     | Skid package (selective)              | Mid                       |            800 |            90 | B        | Planned      |
+| 2     | Steering brace / components           | Mid                       |            300 |             5 | B        | Planned      |
+| 3     | 150Ah LiFePO4 battery                 | Quality mid               |            900 |            42 | A        | Planned      |
+| 3     | 60A DC-DC charger + cabling           | Mid                       |            500 |            10 | A        | Planned      |
+| 3     | 2.5–3.0 kW inverter-charger           | Mid                       |          1,600 |            50 | A        | Planned      |
+| 3     | 4/0 cabling + lugs + fuse (Class-T)   | Quality copper            |            450 |            12 | A        | Planned      |
+| 3     | Monitoring (shunt + display)          | Mid                       |            200 |             1 | A        | Planned      |
+| 3     | Portable solar 200W                   | Folding panel             |            350 |            18 | B        | Deferred     |
+| 2     | Storage system                        | **DECKED D4 or custom**   |          1,500 |           180 | A        | Research     |
+| 2     | Lighting Phase 1                      | **F150LEDs Paladin**      |            200 |             8 | A        | **SELECTED** |
+| 5     | Water containers (2x5–7 gal)          | Mid                       |            120 |        83–116 | A        | Pending      |
+| 5     | Shade awning (lightweight)            | Light mid                 |            600 |            25 | B        | Deferred     |
+| 6     | Winch accessories (line dampers, etc) | Mid                       |            250 |            10 | B        | Deferred     |
+| 6     | Comms (GMRS mobile + antenna)         | Mid                       |            350 |             5 | A        | Planned      |
+| 6     | Satellite messenger                   | Existing? (assume buy)    |            400 |           0.5 | A        | Pending      |
+| 7     | Weight optimization swaps (est)       | TBD                       |            500 | -30 (savings) | B        | Future       |
+| ALL   | Corrosion protection materials        | Fluid film / brushes      |            120 |             3 | A        | Pending      |
 
 Budget Notes: Costs are planning estimates (mid options). Contingency reserve 10–15% recommended. Mark actuals upon purchase.
 
-## 10. Open Questions / Parking Lot
+## 10. Recent Decisions Summary
+
+### Phase 1 - Ready for Procurement
+- **Recovery System**: ARB TRED Pro 45" + Yankum 7/8" x 30' rope ($615 total)
+- **Air System**: ARB Twin CKMTA12 compressor system ($1,245 average)
+- **Lighting Phase 1**: F150LEDs Paladin 150W curved bar + upfitter switches ($200)
+
+### Phase 2 - Decisions Locked
+- **Suspension**: Carli Backcountry 2.0 system ($3,200 installed)
+- **Storage**: Research DECKED D4 vs custom half-width (Super Pacific integration TBD)
+
+### Total Phase 1 Committed Cost: ~$2,060
+### Total Phase 2 Locked Decisions: ~$4,900+ (suspension + storage + lighting Phase 2)
+
+## 11. Open Questions / Parking Lot
 
 - Scale-confirm camper axle impact & final mounting hardware mass (Pending scale data).
 - Keurig exact wattage (assumed 1500W) – verify for surge margin logging.
@@ -116,19 +141,19 @@ Budget Notes: Costs are planning estimates (mid options). Contingency reserve 10
 
 ## 11. Phase 0 & Phase 1 Detail
 
-| Phase | Step                                      | Purpose                       | Notes                                                |
-|-------|-------------------------------------------|-------------------------------|------------------------------------------------------|
-| 0     | Scale weight (axle splits)                | Payload & suspension baseline | Use CAT or local feed scale                          |
-| 0     | Record ride heights (F/R both sides)      | Future sag comparison         | Hub center to fender lip                             |
-| 0     | Tire pressure & chalk test                | Optimize contact patch        | Document baseline PSI set                            |
-| 0     | Inventory required recovery & safety gaps | Prevent impulse buys          | Build prioritized list                               |
-| 0     | Corrosion baseline (photos)               | Track wear in PNW             | Helps future inspections                             |
-| 1     | Acquire core recovery kit                 | Solo safety                   | Rope, shackles, boards, shovel, plug kit             |
-| 1     | Onboard air (if ranked high)              | Air down flexibility & towing | Mount compressor protected (frame rail / under-hood) |
-| 1     | Camper install & re-scale                 | Update constant load          | Capture new axle splits                              |
-| 1     | L-track / anchor points install           | Modular cargo retention       | Avoid permanent drawer early                         |
-| 1     | Fridge + power pre-wire (temporary)       | Validate Ah consumption       | Use Anderson connectors modularly                    |
-| 1     | Weight audit & adjust plan                | Prevent payload creep         | Compare against 3100 lb limit                        |
+| Phase | Step                                      | Purpose                       | Notes                                      |
+|-------|-------------------------------------------|-------------------------------|--------------------------------------------|
+| 0     | Scale weight (axle splits)                | Payload & suspension baseline | Use CAT or local feed scale                |
+| 0     | Record ride heights (F/R both sides)      | Future sag comparison         | Hub center to fender lip                   |
+| 0     | Tire pressure & chalk test                | Optimize contact patch        | Document baseline PSI set                  |
+| 0     | Inventory required recovery & safety gaps | Prevent impulse buys          | Build prioritized list                     |
+| 0     | Corrosion baseline (photos)               | Track wear in PNW             | Helps future inspections                   |
+| 1     | **Acquire ARB TRED Pro + Yankum rope**    | Solo safety baseline          | $615 total; 45" boards + 30' kinetic rope  |
+| 1     | **Install ARB Twin air system**           | Air down flexibility & tools  | Mount location TBD; $1,245 system          |
+| 1     | **Install F150LEDs Paladin bar**          | Basic lighting upgrade        | Bumper mount + upfitter switch integration |
+| 1     | Camper install & re-scale                 | Update constant load          | Capture new axle splits                    |
+| 1     | L-track / anchor points install           | Modular cargo retention       | Prepare for storage decision               |
+| 1     | Weight audit & adjust plan                | Prevent payload creep         | Compare against 3100 lb limit              |
 
 Exit Criteria Phase 1: Reliable solo weekend trip executed with camper + recovery + fridge powered 48h from temporary battery (or starting battery draw test) without voltage issues; accurate revised weight log; prioritized list for Phase 2 suspension decision.
 

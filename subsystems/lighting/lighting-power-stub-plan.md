@@ -1,108 +1,260 @@
 # Lighting & Power Stub Plan
 
-Objective: Pre-wire scalable, fused, labeled circuits for perimeter, work, and accessory loads (Starlink, GMRS, fridge, compressor control) minimizing future rework and preserving modularity within Super Pacific wedge. Interim power: Anker F2000 (portable). Future: Hard-mounted house battery system (timeline TBD).
+**Objective:** Pre-wire scalable, fused circuits for lighting and accessories. Phase 1: Bumper bar + bed area lights. Phase 2: SP integration post-install.
 
-## Strategy
-- Run permanent low-voltage distribution backbone now (fused), even if some loads connect later.
-- Keep high-current inverter & battery bank deferred until loads & duty cycle validated.
-- Use marine-grade tinned copper; sealed connectors; service loops for panel removal.
+## Finalized Light Layout
 
-## Circuit Inventory (Initial Provision)
-| Circuit ID | Load Group                  | Est Continuous (A) | Peak (A) | Wire Gauge (one-way) | Fuse (A) | Switch Type                         | Notes                         |
-|------------|-----------------------------|-------------------:|---------:|----------------------|---------:|-------------------------------------|-------------------------------|
-| L1         | Front Scene (ditch + grill) |                  8 |       10 | 14 AWG               |       15 | Dash SPST + relay                   | Pair 25W LEDs                 |
-| L2         | Side Scene (driver/pass)    |                  6 |        8 | 16 AWG               |       10 | Panel switch (2-pos)                | Shared both sides             |
-| L3         | Rear Scene / Camp           |                  5 |        6 | 16 AWG               |       10 | Panel switch                        | Tailgate zone                 |
-| L4         | Bed / Interior (SP wedge)   |                  3 |        3 | 18 AWG               |        5 | Dimmer (PWM)                        | Warm + task split later       |
-| L5         | Rock / Courtesy (future)    |                  2 |        2 | 18 AWG               |        3 | Panel switch                        | Stub only now                 |
+### Phase 1 Configuration (Immediate Implementation)
+```
+                    FRONT OF TRUCK
+                         ╔═══╗
+                    ┌────╫ C ╫────┐  
+              ┌─────┴──[FB]──────┴─────┐  FB = Front Bumper Bar (150W)       
+              │                         │  
+      [S1]────┤                         ├────[S2] S = Side Scene (20W ea)
+              │          BED            │    
+      [W1]────┤                         ├────[W2] W = Work Lights (15W ea)
+              │     ┌─────────────┐     │    
+              │     │ Super Pac.  │     │    R = Rear Scene (20W ea)
+              │     │   Wedge     │     │    I = Interior (8W total)
+              │     └─────────────┘     │    
+              └─────────[R1][R2]────────┘    
+```
+
+### Light Specifications
+| Position  | Light Type       | Wattage  | Control            | Purpose         | Implementation               |
+|-----------|------------------|----------|--------------------|-----------------|------------------------------|
+| **FB**    | Front Bumper Bar | 150W     | Aux Switch 5 (40A) | Trail driving   | Phase 1 - Paladin curved bar |
+| **S1/S2** | Side Scene       | 20W ea   | Bed Panel          | Camp setup      | Phase 1 - Bed rail mount     |
+| **W1/W2** | Work Lights      | 15W ea   | Aux Switch 1 (25A) | Mechanical work | Phase 1 - Bed corner mount   |
+| **R1/R2** | Rear Scene       | 20W ea   | SP Remote          | Camp lighting   | Phase 2 - SP integration     |
+| **I1-I4** | Interior         | 8W total | SP Remote          | Inside tasks    | Phase 2 - SP integration     |
+
+## Upfitter Switch Assignment (Tremor Factory)
+
+**Confirmed Ratings:**
+- Aux 1 & 2: 25A each
+- Aux 3: 10A  
+- Aux 4: 15A
+- Aux 5 & 6: 40A each (continuous "hot switches")
+
+**Phase 1 Assignment:**
+- **Aux 5 (40A):** Front bumper bar (150W) - Primary driving light
+- **Aux 1 (25A):** Work lights (30W total) - Mechanical tasks
+- **Aux 2 (25A):** GMRS radio
+- **Aux 3 (10A):** Air compressor trigger
+- **Aux 4 (15A):** Spare
+- **Aux 6 (40A):** Spare (future ditch lights or secondary driving)
+
+## Control Strategy
+
+**Dashboard Controls (Driving/Work):**
+- Immediate access to front driving lights and work lights
+- Engine bay to bumper = simple 3-4 foot wire runs
+
+**SP Remote Controls (Camp):**  
+- Rear scene lights for cooking/social area
+- Interior lights for inside SP tasks
+- Side scene lights for camp perimeter (evaluate post-SP install)
+
+**Bed Panel Controls:**
+- Power accessories (Starlink, fridge)
+- Master disconnect
+
+## Circuit Inventory (Updated with Control Strategy)
+| Circuit ID  | Load Group   | Light Position        | Est Continuous (A) | Peak (A) | Wire Gauge | Fuse (A) | Switch Control | Light Specs        |
+|-------------|--------------|-----------------------|-------------------:|---------:|------------|----------|----------------|--------------------|
+| L1-DITCH    | Ditch Lights | D1, D2 (A-pillar)     |                  4 |        5 | 14 AWG     | 10       | Aux 5 (40A)    | 2×25W, 5000K spot  |
+| L2-FRONT    | Front Scene  | G1, G2 (bumper/grill) |                  4 |        5 | 14 AWG     | 10       | Aux 6 (40A)    | 2×25W, 5000K flood |
+| L3-SIDE     | Side Scene   | S1, S2 (bed sides)    |                  3 |        4 | 16 AWG     | 5        | Aux 2 + Panel  | 2×20W, 4000K wide  |
+| L4-WORK     | Work Lights  | W1, W2 (bed corners)  |                2.5 |        3 | 16 AWG     | 5        | Aux 1 + Panel  | 2×15W, 5000K flood |
+| L5-REAR     | Rear Scene   | R1, R2 (tailgate)     |                  3 |        4 | 16 AWG     | 5        | Panel switch   | 2×20W, 3000K warm  |
+| L6-INTERIOR | Interior/Bed | I1-I4 (wedge area)    |                  1 |        1 | 18 AWG     | 3        | Panel dimmer   | 4×2W, 2700K warm   |
 | P1         | Fridge Feed (future)        |                  5 |        7 | 10 AWG               |       15 | Relay (ignition isolation optional) | Anderson SB50 front of drawer |
 | P2         | Starlink                    |                  6 |        7 | 12 AWG               |       10 | Panel switch                        | 12V converter mount roof pass |
-| P3         | GMRS Radio                  |       6 (Tx burst) |       10 | 14 AWG               |       15 | Ignition-fed relay                  | Separate from L circuits      |
-| P4         | Compressor Trigger          |                  1 |        2 | 18 AWG               |        3 | Dash switch to relay coil           | Main power via heavy feed     |
+| P3         | GMRS Radio                  |       6 (Tx burst) |       10 | 14 AWG               |       15 | Factory Aux Switch + relay          | Separate from L circuits      |
+| P4         | Compressor Trigger          |                  1 |        2 | 18 AWG               |        3 | Factory Aux Switch + relay          | Main power via heavy feed     |
 | AUX        | Expansion Spare 1           |                TBD |      TBD | 12 AWG               |       15 | None (capped)                       | Future lighting               |
 | AUX2       | Expansion Spare 2           |                TBD |      TBD | 12 AWG               |       15 | None (capped)                       | Future water pump             |
 
-## Distribution Layout
-| Element               | Spec                                        | Location                       | Notes                       |
-|-----------------------|---------------------------------------------|--------------------------------|-----------------------------|
-| Main Feed (temporary) | 4 AWG from starter battery                  | Through firewall grommet       | Sized for future loads      |
-| Master Fuse           | 125A MIDI ≤7" from battery                  | Engine bay                     | Protect downstream harness  |
-| Bus / Fuse Block      | 12-circuit w/ negative bus (Blue Sea style) | Front bed bulkhead (protected) | Central service point       |
-| Ground Reference      | 4 AWG to frame ground stud                  | Same side as feed              | Star washer, anti-corrosion |
-| Conduit               | Split loom + PET braid outer                | High abrasion zones            | Label under loom ends       |
+## Essential Infrastructure
 
-## Labeling & Documentation
-| ID   | Label Text | Color Heatshrink | Documentation Ref   |
-|------|------------|------------------|---------------------|
-| L1   | FRONT-SCN  | White/Black      | Lighting Plan Table |
-| L2   | SIDE-SCN   | White/Green      | Lighting Plan Table |
-| L3   | REAR-SCN   | White/Yellow     | Lighting Plan Table |
-| L4   | BED-INT    | White/Blue       | Lighting Plan Table |
-| L5   | ROCK       | White/Violet     | Lighting Plan Table |
-| P1   | FRIDGE     | White/Red        | Power Stub Table    |
-| P2   | STARLINK   | White/Orange     | Power Stub Table    |
-| P3   | GMRS       | White/Grey       | Power Stub Table    |
-| P4   | AIR-TRIG   | White/Brown      | Air Spec            |
-| AUX  | SPARE1     | White            | Expansion           |
-| AUX2 | SPARE2     | White            | Expansion           |
+**Power Distribution:**
+- 4 AWG main feed from starter battery through firewall grommet
+- 125A master fuse in engine bay (≤7" from battery)
+- 12-circuit fuse block at front bed bulkhead
+- Single point chassis ground with star washer
 
-## Roof / Pass-Through Planning
-| Pass-Through | Loads                               | Seal Method           | Gauge       | Notes                         |
-|--------------|-------------------------------------|-----------------------|-------------|-------------------------------|
-| Roof Gland 1 | Starlink power, future solar input  | Marine gland + butyl  | 12 & 10 AWG | Separate solar positive route |
-| Roof Gland 2 | Scene light harness (front & sides) | Adhesive base + gland | 14 AWG      | Keep slack loop               |
+**Wire Protection:**
+- Marine-grade tinned copper throughout
+- Split loom + PET braid in high-abrasion areas  
+- Sealed connectors and service loops for component removal
 
-## Grounding Strategy
-- Single primary chassis ground bonded to distribution negative bus; avoid multiple random grounds.
-- Future house battery negative bonds at single point to avoid ground loops with inverter.
+## Tremor Factory Upfitter Switch Integration
 
-## Interim Power Integration (Anker F2000)
-| Approach | Action |
-|----------|--------|
-| Fridge Early Use | Run via Anker 12V output → temporary 10 AWG lead; later migrate to P1 | Avoid double wiring |
-| Lighting During Interim | Power block fed from battery (engine) not Anker | Maintain isolation |
-| Transition Trigger | When >48h engine-off runtime becomes requirement | Initiate house battery project |
+The F-250 Tremor includes 6 factory upfitter switches providing a clean, integrated solution for controlling driving-related lights and accessories. These switches are located in the dash and connect to pre-wired circuits in the engine bay, making them ideal for triggering relays that control high-power loads from your house electrical system.
 
-## Moisture & Corrosion
-| Risk | Mitigation |
-|------|------------|
-| Condensation in canopy | Drip loops + sealed heatshrink ends | Prevent wicking |
-| Salt mist (ferries) | Dielectric grease on exposed terminals | Annual inspection |
+### Factory Upfitter Switch Specifications (Verified)
+- **Quantity:** 6 switches (Aux 1-6)
+- **Location:** Dashboard switch bank
+- **Wire termination:** Engine bay junction box
+- **Control capability:** Momentary or latching (programmable via FORScan)
+- **Current ratings (factory):**
+  - Aux 1: 25A
+  - Aux 2: 25A  
+  - Aux 3: 10A
+  - Aux 4: 15A
+  - Aux 5: 40A (continuous "hot switch")
+  - Aux 6: 40A (continuous "hot switch")
 
-## Wire Gauge Justification
-Using <3% voltage drop target at full load for longest run (~15 ft one-way P1 fridge feed). 10 AWG meets drop constraint at 7A continuous.
+### Optimized Aux Switch Assignment Plan
 
-## Installation Sequence
-1. Route main feed + ground; install master fuse (leave disconnected at battery until final test).
-2. Mount fuse block; terminate feed & ground.
-3. Pull individual circuits (leave +3 ft service loop at load zones) and label both ends.
-4. Terminate low current circuits (lighting) with weather-pack connectors; cap unused spares.
-5. Continuity & polarity test each circuit; then connect master fuse.
-6. Functional test loads (where present); document initial amp draw.
+| Switch No. | Factory Rating | Priority Load             | Control Method     | Rationale                              |
+|------------|----------------|---------------------------|--------------------|----------------------------------------|
+| Aux 5      | 40A (hot)      | High-Power Driving Lights | Direct Control     | Utilize highest capacity for light bar |
+| Aux 6      | 40A (hot)      | Front Scene Lights (L1)   | Direct Control     | Continuous operation capability        |
+| Aux 1      | 25A            | Auxiliary Driving Lights  | Relay Trigger      | Good capacity for secondary lights     |
+| Aux 2      | 25A            | Work Light Control        | Relay Trigger      | Camp setup lighting                    |
+| Aux 4      | 15A            | GMRS Radio (P3)           | Ignition-fed Relay | Adequate for radio + antenna tuner     |
+| Aux 3      | 10A            | Compressor Trigger (P4)   | Relay Trigger      | Lowest load - just trigger signal      |
 
-## Commissioning Checklist
-| Step                                           | Result |
-|------------------------------------------------|--------|
-| All labels legible & heatshrink recovered      |        |
-| Voltage drop test P1 (simulated 7A)            | <0.5V  |
-| Fuse value match table                         |        |
-| No abrasion points (visual)                    |        |
-| Moisture ingress check roof glands (hose test) |        |
+### Control Strategy Options
+**Option A: Direct Control (High-Power Lights)**
+- Use Aux 5 & 6 (40A hot switches) to directly power light circuits
+- Benefit: Eliminates relay complexity for primary driving lights
+- Risk: Factory wiring carries full load current
 
-## Expansion Reserve
-Spare circuits sized to handle future water pump (~8A) or rear inverter control. Additional high-current (≥150A) inverter feed will bypass current block and use separate Class-T fuse & 4/0 cable (deferred).
+**Option B: Relay Trigger Only (Recommended)**
+- Use all aux switches as low-current relay triggers (~200mA)
+- Benefit: Protects factory wiring, enables future expansion
+- All high-power loads fed through bed-area fuse block
 
-## Open Decisions
-| Decision              | Options                            | Criteria                     | Status  |
-|-----------------------|------------------------------------|------------------------------|---------|
-| Scene Light Brand     | Diode Dynamics vs Baja Designs     | Lumens/W, beam pattern, cost | Pending |
-| Fridge Connector Type | Anderson SB50 vs SB30              | Current rating, form factor  | Pending |
-| Roof Harness Path     | Exterior channel vs interior chase | UV exposure, serviceability  | Pending |
+### Wiring Integration Strategy & Complexity Analysis
+
+**Challenge:** Upfitter switches terminate in engine bay, but SP wedge lights are ~8 feet away in bed area.
+
+#### Option A: Direct Upfitter Switch Control (Simplest)
+- **Wiring:** Run 12AWG from engine bay → through cab → to bed fuse block → to SP lights
+- **Pros:** Simple switching, uses full aux switch capacity
+- **Cons:** Long wire runs (~12 feet), larger gauge wire needed, harder to troubleshoot
+- **Cost:** ~$60 in additional heavy gauge wire
+
+#### Option B: Relay-Based Control (Recommended)
+- **Trigger wiring:** Run small 18AWG from engine bay → bed area relay box  
+- **Power wiring:** Heavy gauge from bed fuse block → relays → SP lights (short runs)
+- **Pros:** Shorter heavy wire runs, easier troubleshooting, protects factory wiring
+- **Cons:** Additional relay complexity, more components
+- **Cost:** ~$40 in relays + $30 in wire
+
+#### Option C: Hybrid Approach (Compromise)
+- **High-power SP lights:** Bed panel control only (no aux switch connection)
+- **Aux switches:** Control other bed-area lights via relays (shorter runs to side/rear lights)
+- **Pros:** Reduces complex wiring, still uses aux switches meaningfully
+- **Cons:** SP lights not controllable from dash
+
+### Practical Wiring Route Analysis
+
+**Engine Bay → Bed Area Path Options:**
+
+| Route                | Path Description                                                    | Pros                        | Cons                             | Difficulty  |
+|----------------------|---------------------------------------------------------------------|-----------------------------|----------------------------------|-------------|
+| **Interior**         | Engine bay → firewall grommet → under dash → behind rear seat → bed | Protected from elements     | Dash removal, interior panels    | Hard        |
+| **Frame Rail**       | Engine bay → along frame rail → up to bed                           | Shorter distance, protected | Frame drilling, underbody work   | Medium      |
+| **Existing Harness** | Piggyback on existing trailer/upfitter harness routes               | May exist already           | Limited capacity, shared routing | Easy-Medium |
+
+**Recommended Approach:** Use existing trailer wiring harness route if available, otherwise interior route with proper grommets and protection.
+
+### Optimized Control Strategy (SP Remote Integration)
+
+**Dashboard Upfitter Switches → Driving/Work Lights**
+- Aux 5 (40A): Front driving lights (F1/F2) - primary trail illumination
+- Aux 6 (40A): Ditch/spot lights (D1/D2) - supplemental driving  
+- Aux 1 (25A): Work lights (W1/W2) - mechanical tasks, setup
+- Aux 2-4: Radio, compressor, other accessories
+
+**SP Remote Control → Camp/Scene Lights**
+- Side scene lights (S1/S2): Remote controlled for camp perimeter
+- Rear scene lights (R1/R2): Remote controlled for cooking/social area
+- Interior lights (I1-I4): Remote controlled for inside tasks
+
+**Key Benefits of This Separation:**
+- **Driving lights:** Instant dash access while driving (critical for safety)
+- **Camp lights:** Remote control from outside truck during setup/use
+- **No complex cab routing** for camp lights (SP handles the remote switching)
+- **Logical use patterns:** Drive lights when driving, camp lights when camping
+- **SP integration:** Leverages existing remote capability you already have
+
+**Wiring Simplification:**
+- **Short runs:** Engine bay → bed area for driving/work lights only
+- **SP integration:** Camp lights connect to SP's remote-capable outputs
+- **No interior routing** needed for remotely controlled camp lights
+
+### Control Philosophy
+- **Driving Lights:** Factory dash switches for immediate driver access (Aux 1-3)
+- **Camp Lighting:** Bed-area panel switches for setup convenience (L2-L5 circuits)  
+- **Hybrid Loads:** Radio/compressor benefit from both dash control and bed-area master disconnect
+- **Safety:** All switches return to OFF when ignition cycled (prevents battery drain)
+
+### Programming Notes (FORScan)
+- Configure aux switches as latching (not momentary) for lighting loads
+- Enable "Memory" function to retain switch states during engine restart
+- Disable aux switch operation when truck is off (prevent battery drain)
+- Test switch operation before finalizing relay assignments
+
+### Design Decision: Direct vs Relay Control
+
+**Key Finding:** Aux 5 & 6 are 40A "hot switches" with continuous operation capability - significantly higher than typical aux switch ratings.
+
+**Option A: Hybrid Approach**
+- Direct control high-power driving lights via Aux 5 & 6 (40A)
+- Relay control for all other loads via Aux 1-4
+- Pro: Maximum simplicity for primary driving lights
+- Con: Factory wiring carries full current, less future flexibility
+
+**Option B: Full Relay Control (Recommended)**  
+- All aux switches as relay triggers only
+- Pro: Protects factory wiring, maximum expansion capability
+- Con: Slightly more complex wiring, additional relays required
+
+## Implementation Plan
+
+### Phase 1 Priorities (Immediate)
+1. **Front bumper bar installation** (F150LEDs Paladin 150W)
+   - Direct connection to Aux 5 (40A)
+   - Simple 3-4 foot wire run from engine bay
+   - Immediate driving light capability
+
+2. **Work light installation** 
+   - Mount at bed front corners
+   - Connect to Aux 1 (25A) via relay
+   - Engine bay tasks and camp setup
+
+3. **Bed area fuse block setup**
+   - Central distribution point for all bed lighting
+   - Future-ready for SP integration
+
+### Phase 2 Gates (Post-SP Install)
+1. **Assess SP remote capabilities**
+   - Determine switching capacity for camp lights
+   - Evaluate remote control integration options
+
+2. **Install remaining camp lights**
+   - Side scene lights (evaluate: upfitter vs SP control)
+   - Rear scene lights (SP remote control)
+   - Interior lights (SP remote control)
+
+### Installation Sequence
+1. Install bed area fuse block and main power feed
+2. Install front bumper bar with upfitter switch connection  
+3. Install work lights with upfitter switch connection
+4. Test and document Phase 1 functionality
+5. **Phase 2 Gate:** SP installation and capability assessment
+6. Complete camp lighting integration based on SP capabilities
 
 ## Next Steps
-1. Confirm final fridge location footprint (tie into storage gate doc).
-2. Choose scene light brand; update BOM & decision log.
-3. Procure wire, block, connectors; begin install with feed & block only.
-4. Log actual current draws post-install; update table if variance >15%.
+1. **Procure Phase 1 components:** Paladin bumper bar, work lights, fuse block
+2. **Install Phase 1 lighting** (bumper bar + work lights)
+3. **Test upfitter switch operation** and document current draws
+4. **Schedule SP installation** and lighting integration assessment
 
-Assumptions: Ambient moderate; adjust fuse sizing if continuous ambient > 100°F (derate). Final inverter system deferred pending load modeling.
+> **Detailed explorations and alternative approaches moved to:** `lighting-exploration-appendix.md`

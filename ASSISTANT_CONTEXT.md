@@ -33,8 +33,8 @@ Implemented overviews: Recovery, Air (need expansions per hub action queue). Mis
 
 ## 4. Active Philosophies & Guardrails
 
-- Weight First: Track cumulative payload; keep ≥150 lb buffer below payload rating unless deliberate exception logged.
-- Gate Before Spend: No major subsystem purchase until measurement data meets defined trigger (e.g., rear sag >1.5" or poor oscillation damping on washboard).
+- Weight Validation: Track cumulative payload; validate during build progression rather than hard-gating decisions. Maintain awareness but enable forward progress.
+- Progressive Validation: Build solid plan and validate data as components are acquired/installed. Measurements inform optimization timing rather than blocking purchases.
 - Modularity: Prefer reversible, serviceable components; delay permanent storage (drawers) until inefficiency proven.
 - Objective Logging: Scale tickets, ride heights, fill times, voltage drop, temperature logs captured in `docs/data/`.
 - Minimal Drift: Main plan stays concise; deep rationale resides in subsystem docs & decision log.

@@ -1,34 +1,132 @@
-# Storage & Organization Gate Outline
+# Custom Drawer System Specification
 
-Objective: Transition from ad-hoc bins to a semi-permanent drawer / panel system only when data shows recurring efficiency or safety gains, while preserving payload buffer and keeping CG forward and low.
+## Project Summary
 
-## Current Philosophy Snapshot
+**Objective**: Design and build a custom drawer system for F-250 bed optimized for weight, accessibility, and Super Pacific wedge integration.
 
-- Present Mode: Modular bins + molle panels (planned) inside Super Pacific wedge.
-- Emphasis: Fast setup/teardown, clear organization (owner priority), minimal early weight.
+**Decision**: Research half-width options vs proven DECKED + Super Pacific integration.
 
-## Gate Triggers (Advance When ≥2 Met)
+**Key Requirements**:
+- F-250 6.75' bed + Super Pacific compatibility (critical)
+- Reversible installation (bolt-in, no bed drilling)  
+- Weather-resistant storage for PNW conditions
+- Weight discipline (≤180 lbs preferred)
+- Proven reliability over custom complexity
 
-| Trigger Domain    | Metric / Observation                          | Threshold                  | Measurement Method   | Notes                                    |
-|-------------------|-----------------------------------------------|----------------------------|----------------------|------------------------------------------|
-| Retrieval Time    | Avg time to locate common item (top 10 items) | >45 sec avg                | Time 3 trips; log    | Indicates search inefficiency            |
-| Lost Item Events  | Times an item was re-purchased / forgotten    | ≥2 / quarter               | Trip debrief         | Organization failure cost                |
-| Bed Repack Time   | Camp departure to stowed                      | >20 min consistently       | Stopwatch            | Setup fatigue driver                     |
-| Payload Growth    | Constant rear load (ex water, tools)          | >600 lb constant           | Weight ledger        | Drawer weight becomes smaller % overhead |
-| Safety            | Unrestrained mass shifts under braking        | Any slide >6" or tip event | Observation / photos | Secure containment priority              |
-| Weather Intrusion | Gear moisture events                          | ≥2 incidents               | Visual/log           | Need sealed compartments                 |
+**Approach Options**:
+1. **DECKED D4** - Simple, proven, F-250 specific (210 lbs, $1,400-1,600)
+2. **Half-width custom** - Preserve walking space but requires research/design
+- **Estimated Cost**: $1,400-2,000 depending on approach
+- **Target Weight**: 150-210 lbs depending on solution
+- **Lead Time**: 2-6 weeks (DECKED vs custom fabrication)
 
-## Drawer System Design Targets (When Gate Opens)
+**Implementation Timeline**: Phase 2 (post suspension install, before major electrical)
 
-| Aspect          | Target                                                            | Rationale                              |
-|-----------------|-------------------------------------------------------------------|----------------------------------------|
-| Weight (empty)  | ≤ 140 lb (full system 2 drawers + top deck)                       | Maintain payload buffer                |
-| Material        | Hybrid: 12mm marine ply carcass + aluminum slides                 | Balance cost & serviceability          |
-| Fastening       | Bolted to bed L-track / factory tie-downs (no drilling bed floor) | Reversible                             |
-| Modularity      | Removable in ≤60 min with 2 people                                | Preserve truck utility                 |
-| Height          | Maintain lowest deck ≤ drawer internal 9"                         | Preserve vertical space for bins above |
-| Tie-Down Points | At least 4 recessed rings on deck                                 | Secure bins / fridge                   |
-| Venting         | Passive slots for damp items drawer                               | PNW moisture mitigation                |
+---
+
+## Requirements Definition
+
+### Critical Requirements (Non-Negotiable)
+- **F-250 6.75' bed fit**: Must work with Super Pacific wedge installed
+- **Weight limit**: ≤180 lbs total system (preserve payload discipline)
+- **Reversible install**: No permanent bed modifications, bolt-in only
+- **Weather resistance**: Sealed storage for PNW moisture conditions
+- **Walking space preserved**: Half-width or single-side configuration preferred
+
+### Preferred Features (Evaluate & Prioritize)
+- **Full-height access**: Maintain walking/standing room on one side of bed
+- **Fridge integration**: Secure mounting for 50L fridge
+- **Power routing**: Clean 12V distribution to accessories
+- **Modular configuration**: Adjustable or removable components
+- **Secure storage**: Locking capability for tools/valuables
+- **Work surface**: Usable deck space for camp tasks
+
+### F-250 Bed Layout Options
+
+#### Half-Width Configuration (Recommended)
+- **Storage Side**: 36" W × 81" L × 24" H cabinet/tray system
+- **Walking Space**: 14" W × 81" L × full height clearance
+- **Fridge Placement**: On storage side top deck or dedicated slide
+- **Access**: Full standing height on open side, organized storage on cabinet side
+
+#### F-250 Bed Specifications  
+- **Interior dimensions**: 81" L × 50" W (between wheel wells)
+- **Half-width allocation**: 36" storage + 14" walking space
+- **Height clearance**: 24" max system height (preserve overhead bins)
+- **Mounting points**: Factory L-track system, bed tie-down loops
+- **Super Pacific integration**: Must not interfere with camper mounting/operation
+
+## Storage System Options Comparison
+
+### A. Half-Width Cabinet/Tray Systems (Preferred Approach)
+
+| Brand/Model                | Configuration       | Weight (lbs) | Price Range  | F-250 Fit       | Walking Space | Modularity  | Score |
+|----------------------------|---------------------|--------------|--------------|-----------------|---------------|-------------|-------|
+| **Goose Gear Plates**      | Single-side modular | 120-150      | $1,200-1,800 | ❓ F-250 TBD     | ✅ Full height | ✅ Excellent | 7/10  |
+| **Front Runner Wolf Pack** | Modular cabinet     | 140-160      | $1,500-2,000 | ❓ Universal fit | ✅ Full height | ⚠️ Limited  | 7/10  |
+| **Drawer Tech Systems**    | Custom half-width   | 120-150      | $1,200-1,800 | ✅ F-250 option  | ✅ Full height | ✅ Good      | 8/10  |
+| **Local PNW Fabrication**  | Half-width custom   | 100-130      | $800-1,200   | ✅ Perfect fit   | ✅ Full height | ✅ Custom    | 9/10  |
+
+### B. Full-Width Drawer Systems (Proven Alternative)
+
+| Brand/Model      | Weight (lbs) | Price Range  | F-250 Fit        | Reliability | SP Integration | Score |
+|------------------|--------------|--------------|------------------|-------------|----------------|-------|
+| **DECKED D4**    | 210          | $1,400-1,600 | ✅ F-250 specific | ✅ Proven    | ❓ TBD          | 8/10  |
+| **ARB Elements** | 165          | $1,800-2,000 | ❓ F-250 TBD      | ✅ Good      | ❓ TBD          | 6/10  |
+
+**Revised Scoring**: F-250 Fit (30%), Reliability/Support (25%), Price (20%), Weight (15%), Integration (10%)
+
+### Top Candidate Analysis
+
+#### DECKED D4 + Super Pacific (Pragmatic Choice)
+**Strengths**:
+- **Confirmed F-250 6.75' bed engineering** - no guesswork on fit
+- Proven reliability and extensive user base
+- Strong dealer network and parts availability  
+- Professional installation available
+- Weather sealing adequate for most conditions
+
+**Critical Unknown**: 
+- **Super Pacific + DECKED integration** needs verification
+- Height clearance when camper deployed vs DECKED deck height
+- Access ergonomics - how does it feel to use both systems together?
+- Fridge mounting on DECKED deck with camper above
+
+**Decision Gate**: 
+- Test fit Super Pacific + DECKED interaction before final commitment
+- May require Super Pacific dealer consultation on clearances
+- Consider visiting DECKED dealer with Super Pacific dimensions
+
+#### Local PNW Fabrication (Custom Route)
+**Strengths**:
+- **Perfect integration** designed around Super Pacific + F-250 specifics
+- Half-width preserves walking space and truck utility
+- Lightest weight option (100-130 lbs vs 210 lbs)
+- Support local craftsmanship
+
+**Challenges**:
+- Research and design time investment
+- Need to find qualified fabricator with truck storage experience
+- Potential for delays or design iterations
+- Less proven than commercial solutions
+
+#### Custom Local Fabrication (Best Value)
+**Strengths**:
+- **Perfect F-250 6.75' bed + Super Pacific integration**
+- Lightest option (100-130 lbs)
+- Complete customization of layout and features
+- Support local PNW fabrication
+
+**Approach**:
+- Half-width cabinet on one side (driver or passenger)
+- Integrated fridge slide and power routing
+- Marine-grade materials for PNW conditions
+- Bolt-to-L-track mounting (reversible)
+
+**Considerations**:
+- Requires finding qualified local fabricator
+- Design and build timeline (4-6 weeks)
+- Need detailed specifications upfront
 
 ## Panel / Vertical Storage
 
@@ -49,15 +147,38 @@ Objective: Transition from ad-hoc bins to a semi-permanent drawer / panel system
 
 Track delta vs original bin solution (estimate current bin system weight ≈ 40 lb).
 
-## Decision Matrix (Build vs Buy)
+## Implementation Planning
 
-| Option                         |          Cost | Est Weight | Custom Fit |     Lead Time | Serviceability | Notes                            |
-|--------------------------------|--------------:|-----------:|-----------:|--------------:|---------------:|----------------------------------|
-| Commercial Drawer (ARB/DECKED) | $1,500–$1,900 | 210–230 lb |          2 |       2–4 wks |              3 | High weight penalty              |
-| Custom Plywood Hybrid          |     $600–$800 | 120–140 lb |          5 | 1–2 wks (DIY) |              5 | Optimal weight/fit               |
-| Aluminum Fabricated            | $1,800–$2,400 | 110–130 lb |          5 |       3–5 wks |              4 | Higher cost; corrosion resistant |
+### Phase 2 Procurement Plan
+1. **Research Phase** (1-2 weeks)
+   - **Priority A**: Contact DECKED dealer about Super Pacific + D4 integration clearances
+   - **Priority B**: Find local PNW fabricators with truck storage experience  
+   - **Secondary**: Research other F-250 specific systems if DECKED integration problematic
+   - Document Super Pacific deployment dimensions and clearance needs
+   - Get quotes from DECKED dealer and 1-2 local fabrication options for comparison
 
-Score custom hybrid highest for weight discipline + budget.
+2. **Decision Phase** (1 week)
+   - Weight vs features final evaluation
+   - Budget confirmation ($1,500-2,000 range)
+   - Installation scheduling (DIY vs professional)
+
+3. **Installation Phase** (1-2 days)
+   - Remove Super Pacific temporarily if needed
+   - System install and integration
+   - Power routing for fridge/accessories
+   - Load testing and adjustment
+
+### Power Integration Requirements
+- **Fridge Circuit**: 10 AWG from aux battery, 40A fuse, Anderson connector
+- **Accessory Power**: 14 AWG for lights/USB, switched distribution
+- **Routing**: Through drawer system or alongside, weatherproof connections
+
+### Success Criteria
+- ≤180 lb total weight impact
+- Weather-tight storage achieved  
+- Fridge mounting secure for off-road use
+- Complete drawer access maintained
+- No bed damage/permanent modification
 
 ## Fridge & Power Integration Stubs
 
@@ -106,12 +227,26 @@ Score custom hybrid highest for weight discipline + budget.
 | Payload buffer shrinks < 800 lb remaining | Delay drawer install |
 | Constant load < 400 lb after 3 trips      | Maintain bins longer |
 
-## Immediate Next Steps
+## Research Action Items
 
-1. Begin logging retrieval time & lost item events next 2 outings.
-2. Weigh existing bin system & contents; enter ledger.
-3. Sketch custom layout with fridge placeholder footprint (even if fridge TBD).
-4. Decide wiring stubs to pre-run before drawer carcass installed.
+### Immediate Steps (Next 2 Weeks)
+1. **Local Fabricator Research**:
+   - Search Seattle/Tacoma/Portland metal fabrication shops
+   - Look for marine fabricators (experienced with weather sealing)
+   - Check truck equipment installers who do custom storage
+   - Get referrals from local 4WD/overland communities
+
+2. **F-250 Specific System Research**:
+   - Contact Drawer Tech directly about F-250 6.75' options
+   - Check if Front Runner Wolf Pack actually fits F-250 dimensions
+   - Research smaller companies that specialize in Super Duty storage
+   - Look for F-250 build threads on forums (what storage did they use?)
+
+3. **Design Requirements Documentation**:
+   - Sketch half-width layout preferences (driver vs passenger side)
+   - List specific storage needs (tool sizes, fridge integration, etc.)
+   - Document Super Pacific clearance requirements
+   - Define preferred materials (aluminum vs marine plywood)
 
 ---
 Assumptions: Future fridge ~50 lb empty; constant water load < 80 lb; adjust targets if actual constant load > goal by >15%.

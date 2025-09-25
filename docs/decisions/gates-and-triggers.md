@@ -66,7 +66,7 @@ Stage only when a documented gap appears:
 
 ## Weight Optimization Trigger
 
-Initiate Phase 7 early if payload buffer <200 lbs or front/rear axle approaches ≥90% GAWR on scale.
+Progressive validation approach: Track cumulative weight during build phases. Initiate optimization review if payload buffer <200 lbs or front/rear axle approaches ≥90% GAWR on scale, but don't hard-gate component purchases - validate and adjust as needed.
 
 ## Towing / WDH
 
