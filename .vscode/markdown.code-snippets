@@ -1,0 +1,27 @@
+{
+  "Assumption Block": {
+    "prefix": "assumption",
+    "body": ["**Assumption:** $1"],
+    "description": "Insert an assumption notation"
+  },
+  "Action Block": {
+    "prefix": "actionitem",
+    "body": ["**Action:** $1"],
+    "description": "Insert an action item notation"
+  },
+  "Risk Row": {
+    "prefix": "riskrow",
+    "body": ["| $1 Risk | Mitigation: $2 |"],
+    "description": "Insert a simple risk table row"
+  },
+  "Phase Table Row": {
+    "prefix": "phaserow",
+    "body": ["| $1 | $2 | $3 | $4 |"],
+    "description": "Insert a phased roadmap row"
+  },
+  "Weight Table Row": {
+    "prefix": "weightrow",
+    "body": ["| $1 | $2 | $3 |"],
+    "description": "Insert a weight table line"
+  }
+}

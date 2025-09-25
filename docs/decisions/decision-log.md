@@ -1,0 +1,15 @@
+# Decision Log
+
+Chronological record of major build decisions with rationale and revisit triggers.
+
+| Date       | Decision                                           | Scope / Subsystem  | Rationale (Inputs)                                               | Outcome / Selected Path                    | Revisit Trigger                                                    |
+|------------|----------------------------------------------------|--------------------|------------------------------------------------------------------|--------------------------------------------|--------------------------------------------------------------------|
+| 2025-09-24 | Retain 35" tires Year 1                            | Tires / Drivetrain | Unknown towing trans temp margin; payload & gearing preservation | Defer 37" evaluation; keep 35"             | After towing temp log shows ample margin + payload buffer ≥250 lbs |
+| 2025-09-24 | High-power house inverter (12V 2.2–3.0 kW)         | Electrical         | Need silent Keurig/microwave use; OEM 2kW requires engine        | Install 12V inverter-charger near battery  | If future continuous >3 kW or induction added → evaluate 24V       |
+| 2025-09-24 | Selective armor only (trans + transfer + steering) | Protection         | Weight discipline; unknown strike patterns yet                   | Stage minimal plates first                 | Evidence of strikes / trail shift to rocky terrain                 |
+| 2025-09-24 | Onboard air early                                  | Air System         | Supports tire tuning + RV + future suspension trim               | Dual compressor (no tank initially)        | Need for air tools / bead seating → consider small tank            |
+| 2025-09-24 | Carli Backcountry deferred                         | Suspension         | Sag & ride data not yet captured; avoid premature lift           | Gather sag, ride logs first                | Rear sag >1.5" loaded OR poor washboard control                    |
+| 2025-09-24 | Rear air bags deferred (trim aid only)             | Suspension         | Unsure if rake loss will occur under tow; avoid complexity       | Add placeholder only                       | Loaded rake <0.5" with WDH OR fine tuning needed                   |
+| 2025-09-24 | Weight buffer policy (≥150 lbs)                    | Weight Mgmt        | Prevent payload creep / future flexibility                       | Maintain running delta                     | Buffer <200 lbs post-phase → early optimization pass               |
+| 2025-09-24 | Lighting staged low-profile                        | Lighting           | Avoid aero/noise and redundancy                                  | Reverse/work → scene → ditch               | Documented night use gap                                           |
+| 2025-09-24 | Prefer direct 2.5" hitch recovery hardware         | Recovery           | Eliminates reducer slop; maximizes pin shear & rating margin     | 2.5" shackle block (soft shackle friendly) | If accessory ecosystem forces sustained 2" only usage              |
