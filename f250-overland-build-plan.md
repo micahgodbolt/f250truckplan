@@ -2,16 +2,7 @@
 
 > Action-focused plan. Background rationale moved to `docs/overland-context.md`.
 
-## 1. Over## 11. Open Questions / Parking Lot
-
-- Scale-confirm camper axle impact & final mounting hardware mass (Pending scale data).
-- Keurig exact wattage (assumed 1500W) – verify for surge margin logging.
-- **Storage decision**: DECKED D4 + Super Pacific integration vs custom half-width fabrication.
-- Winch line speed vs weight preference (shortlist once bumper ordered).
-- Air system mount location (engine bay vs frame rail vs under-bed).
-- Corrosion mitigation schedule (decide annual vs semi-annual after first winter exposure).
-
-## 12. Phase 0 & Phase 1 Detailferences
+## 1. Overview
 
 This file now stays lean: focuses on upgrade decisions, phase sequencing, costs, and active gates. All supporting context & raw data moved to modular docs.
 
@@ -29,10 +20,10 @@ Reference Map:
 
 Baseline vehicle, use profile, constraints, and full subsystem rationales were relocated (see context + decisions). This plan shows WHAT will be done, WHEN, and high-level WHY.
 
-## 5. Phased Roadmap
+## 2. Phased Roadmap
 
 | Phase                               | Objective                          | Key Deliverables                                    | Exit Criteria                       |
-|-------------------------------------|------------------------------------|-----------------------------------------------------|-------------------------------------|
+| ----------------------------------- | ---------------------------------- | --------------------------------------------------- | ----------------------------------- |
 | 0 Assessment                        | Baseline data & priorities         | Scale weight, measurements, use refinement          | Payload & use profile locked        |
 | 1 Foundation (Safety & Reliability) | Protection, recovery basics, tires | Tires, basic recovery kit, comms baseline           | Field test weekend                  |
 | 2 Suspension & Handling             | Payload-ready, ride quality        | Tuned shocks, springs/leaf pack, steering tightness | Washboard test acceptable           |
@@ -42,10 +33,10 @@ Baseline vehicle, use profile, constraints, and full subsystem rationales were r
 | 6 Advanced Recovery & Comms         | Remote reliability                 | Winch, upgraded comms, traction aids                | Self-recovery drill success         |
 | 7 Optimization                      | Weight & refinement                | Component audits, reduce redundancies               | Net weight reduction / improved MPG |
 
-## 6. Subsystem Status Snapshot
+## 3. Subsystem Status Snapshot
 
 | Subsystem       | Current Decision                          | Next Gate / Data Needed              | Notes                                                        |
-|-----------------|-------------------------------------------|--------------------------------------|--------------------------------------------------------------|
+| --------------- | ----------------------------------------- | ------------------------------------ | ------------------------------------------------------------ |
 | Tires           | Retain 35" Year 1                         | Towing trans temps; payload buffer   | 37" deferred until data margin proven                        |
 | Suspension      | **SELECTED: Carli Backcountry 2.0**       | Phase 2 implementation timing        | Decision final; $3,200 system ready for Phase 2 procurement  |
 | Towing / WDH    | ReCurve R3 planned                        | Three-pass scale; front axle restore | Tune bar tension before considering bags                     |
@@ -59,7 +50,7 @@ Baseline vehicle, use profile, constraints, and full subsystem rationales were r
 | Weight Mgmt     | Track cumulative; validate as we go       | Scale tickets; ledger updates        | Progressive validation approach - optimize if buffer <200 lb |
 | Future Trim Aid | Rear air bags deferred                    | Rake & towing sag data               | Trim aid only; not spring substitute                         |
 
-## 7. Immediate Action Items
+## 4. Immediate Action Items
 
 Immediate (Pre-Phase 1):
 
@@ -73,10 +64,10 @@ Immediate (Pre-Phase 1):
 8. Perform three-pass axle weight sequence (unhitched / hitched no bars / hitched bars engaged) and log results.
 9. Capture Keurig model & nameplate watt rating (photo or manual) – verify surge headroom (assume 1500W OK).
 
-## 8. Risks
+## 5. Risks
 
 | Risk                | Mitigation                                                |
-|---------------------|-----------------------------------------------------------|
+| ------------------- | --------------------------------------------------------- |
 | Overloading GVWR    | Weight tracking sheet; weigh after each major phase       |
 | Electrical faults   | Proper gauge, fusing at source, marine-grade terminations |
 | Tire failure remote | Full-size spare, plug kit, sidewall patch, onboard air    |
@@ -84,10 +75,10 @@ Immediate (Pre-Phase 1):
 | Navigation loss     | Redundant offline maps + satellite messenger              |
 | Winch misuse injury | Formal training / practice session                        |
 
-## 9. Budget Tracking (To Populate)
+## 6. Budget Tracking (To Populate)
 
 | Phase | Item                                  | Option (Chosen)           | Est Cost (USD) |  Weight (lbs) | Priority | Selected?    |
-|-------|---------------------------------------|---------------------------|---------------:|--------------:|----------|--------------|
+| ----- | ------------------------------------- | ------------------------- | -------------: | ------------: | -------- | ------------ |
 | 0     | Scale tickets (multiple passes)       | Local CAT scales          |             40 |             0 | A        | Pending      |
 | 0     | Tire tools (gauge, chalk, IR)         | Mid                       |             85 |             3 | A        | Pending      |
 | 1     | Recovery core kit                     | **ARB TRED Pro + Yankum** |            615 |            75 | A        | **SELECTED** |
@@ -117,21 +108,24 @@ Immediate (Pre-Phase 1):
 
 Budget Notes: Costs are planning estimates (mid options). Contingency reserve 10–15% recommended. Mark actuals upon purchase.
 
-## 10. Recent Decisions Summary
+## 7. Recent Decisions Summary
 
 ### Phase 1 - Ready for Procurement
+
 - **Recovery System**: ARB TRED Pro 45" + Yankum 7/8" x 30' rope ($615 total)
 - **Air System**: ARB Twin CKMTA12 compressor system ($1,245 average)
 - **Lighting Phase 1**: F150LEDs Paladin 150W curved bar + upfitter switches ($200)
 
 ### Phase 2 - Decisions Locked
+
 - **Suspension**: Carli Backcountry 2.0 system ($3,200 installed)
 - **Storage**: Research DECKED D4 vs custom half-width (Super Pacific integration TBD)
 
 ### Total Phase 1 Committed Cost: ~$2,060
+
 ### Total Phase 2 Locked Decisions: ~$4,900+ (suspension + storage + lighting Phase 2)
 
-## 11. Open Questions / Parking Lot
+## 8. Open Questions / Parking Lot
 
 - Scale-confirm camper axle impact & final mounting hardware mass (Pending scale data).
 - Keurig exact wattage (assumed 1500W) – verify for surge margin logging.
@@ -139,10 +133,10 @@ Budget Notes: Costs are planning estimates (mid options). Contingency reserve 10
 - Winch line speed vs weight preference (shortlist once bumper ordered).
 - Corrosion mitigation schedule (decide annual vs semi-annual after first winter exposure).
 
-## 11. Phase 0 & Phase 1 Detail
+## 9. Phase 0 & Phase 1 Detail
 
 | Phase | Step                                      | Purpose                       | Notes                                      |
-|-------|-------------------------------------------|-------------------------------|--------------------------------------------|
+| ----- | ----------------------------------------- | ----------------------------- | ------------------------------------------ |
 | 0     | Scale weight (axle splits)                | Payload & suspension baseline | Use CAT or local feed scale                |
 | 0     | Record ride heights (F/R both sides)      | Future sag comparison         | Hub center to fender lip                   |
 | 0     | Tire pressure & chalk test                | Optimize contact patch        | Document baseline PSI set                  |
@@ -157,22 +151,22 @@ Budget Notes: Costs are planning estimates (mid options). Contingency reserve 10
 
 Exit Criteria Phase 1: Reliable solo weekend trip executed with camper + recovery + fridge powered 48h from temporary battery (or starting battery draw test) without voltage issues; accurate revised weight log; prioritized list for Phase 2 suspension decision.
 
-## 12. Top Near-Term Actions (Full list in `tasks/todo-ledger.md`)
+## 10. Top Near-Term Actions (Full list in `tasks/todo-ledger.md`)
 
 | Priority | Action                                             | Purpose                           | Gate                   |
-|----------|----------------------------------------------------|-----------------------------------|------------------------|
+| -------- | -------------------------------------------------- | --------------------------------- | ---------------------- |
 | A        | Baseline scale weight (axle splits)                | Payload math & sag gating         | Access to scale        |
 | A        | Unladen ride heights (hub→fender)                  | Establish rake baseline           | Level surface          |
 | A        | Hitch 3-pass weight (truck / hitch no bars / bars) | Validate WDH setup                | Trailer loaded         |
 | A        | Inverter run length & mount distance               | Confirm cable gauge & fuse        | Mount point identified |
 | B        | Keurig nameplate & microwave input                 | Surge & load profile verification | Appliance access       |
 
-## 13. Priority Decision Matrix & Gates
+## 11. Priority Decision Matrix & Gates
 
-### 13.1 Summary Matrix
+### 11.1 Summary Matrix
 
 | Topic                           | Objective                                  | Data Gate(s)                                                     | Risks If Premature                              | Current Recommendation               |
-|---------------------------------|--------------------------------------------|------------------------------------------------------------------|-------------------------------------------------|--------------------------------------|
+| ------------------------------- | ------------------------------------------ | ---------------------------------------------------------------- | ----------------------------------------------- | ------------------------------------ |
 | Onboard Air Integration         | Fast air down/up + trailer & load support  | Final chosen compressor location; amperage wiring path length    | Heat soak, wasted weight (oversize)             | Proceed soon (post location measure) |
 | 37" Tires Feasibility           | Increased ground clearance / footprint     | Baseline towing trans temps; scale weights; gearing confirmation | Towing performance loss; higher rotational mass | Defer until data captured            |
 | Carli Backcountry Suspension    | Improved washboard control & loaded ride   | Rear sag >1.0–1.5" confirmation; ride log unladen vs loaded      | Over-sprung unladen, unnecessary cost           | Prepare worksheet; wait for sag data |
@@ -181,8 +175,8 @@ Exit Criteria Phase 1: Reliable solo weekend trip executed with camper + recover
 
 See `docs/decisions/gates-and-triggers.md` for full gating logic (suspension, 37" tires, air bags, armor, lighting, electrical expansion).
 
-
 Legend: Pending = next actionable when prereqs available; Deferred = intentionally paused awaiting external condition/data.
 
 ---
+
 Next Step: Provide the action item data in Section 9 (scale weight, axle ratio confirmation, camper weight, RV load list, priority ranking) so we can lock Phase 1 procurement list.
